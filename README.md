@@ -1,6 +1,8 @@
-l# Career Recommendation Engine
+# Career Recommendation Engine
 
-The goal of this project was to build a job recommendation engine. With vectorized skills as the features, the job titles were first clustered using hierarchical clustering. These clusters loosely represent industries. When a new user's resume comes in, they are assigned a cluster (multinomial logistic regression) and recommended job titles from each cluster using cosine similarity, as well as five skills the new user lacks that they need to obtain to get that position.
+A local start up asked for a job and skills recommendation engine to help give users an idea of what they can do to change their career.
+
+Text scrubbing and cleaning was followed by TFIDF vectorization to extract relevant text features from user job descriptions and skills. In this case we are comparing the text features between different unique job titles. The job titles are first clustered using agglomerative hierarchical clustering in order to loosely represent industries. A new user is assigned to a cluster using multinomial logistic regression and then recommended job titles from each of the clusters using cosine similarity comparison. We are also able to suggest the most common skills necessary for that job title.
 
 Parts of the code have been purposely left out for legal reasons.
 
